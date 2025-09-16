@@ -1,0 +1,9 @@
+h1{
+    font-size: 4em
+}
+h1 + p{
+    font-size: 1.5em
+}
+h2 + ul{
+    font-size: 2em
+}
