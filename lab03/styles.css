@@ -1,9 +1,26 @@
+body{
+    background-color: #c34946;
+}
 h1{
     font-size: 4em
 }
 h1 + p{
     font-size: 1.5em
 }
-h2 + ul{
-    font-size: 2em
+h2{
+    text-align: center;
+    font-size: 3em;
+}
+.athletes{
+    text-align: center;
+}
+.athletes a{
+    font-size: 2em;
+    padding:1rem;
+    background-color: #7393B3;
+    margin-right: 15px; 
+    text-decoration: none; 
+}
+h3{
+    font-size: 2em;
 }
