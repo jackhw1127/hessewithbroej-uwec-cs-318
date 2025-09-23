@@ -2,7 +2,9 @@ body{
     background-color: #c34946;
 }
 h1{
-    font-size: 4em
+    font-size: 4em;
+    color: #3376b9;
+    
 }
 h1 + p{
     font-size: 1.5em
@@ -20,6 +22,10 @@ h2{
     background-color: #7393B3;
     margin-right: 15px; 
     text-decoration: none; 
+}
+.athlete_photos{
+    text-align: center;
+    padding: 2rem;
 }
 h3{
     font-size: 2em;
