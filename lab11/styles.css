@@ -1,0 +1,92 @@
+header {
+  background-color: #708090;
+  padding: 1rem;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;  
+  align-items: center;
+  max-width: 100%;
+}
+
+.header-content a {
+  text-decoration: underline;
+  color: #333;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.header-content a:hover {
+  color: rgb(14, 74, 194);   
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 5rem 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.logo {
+    width: 50%;
+    height: 100%;
+}
+
+.storybox {
+  background-color: #4b2b15;      
+  color: white;                    
+  width: 60%;                      
+  margin: 3rem auto;               
+  padding: 2rem;                   
+  border-radius: 15px;             
+  text-align: center;             
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
+}
+
+.ourstory {
+  font-size: 2.5rem;               
+  margin-bottom: 1rem;
+  text-transform: uppercase;       
+  letter-spacing: 2px;             
+}
+
+.storybox p {
+  font-size: 1.2rem;               
+  line-height: 1.6;                
+  max-width: 90%;
+  margin: 0 auto;                  
+}
+
+body {
+  background-color: #899499; 
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.menutitle {
+  background-color: #36454f;      
+  color: white;                   
+  width: 40%;                     
+  margin: 3rem auto;              
+  padding: 1.5rem;                
+  border-radius: 10px;            
+  text-align: center;            
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
+}
+
+.menutitle h2 {
+  font-size: 2rem;                
+  margin: 0;                      
+  letter-spacing: 2px;            
+}
