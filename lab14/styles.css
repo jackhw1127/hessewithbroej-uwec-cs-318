@@ -1,0 +1,138 @@
+
+/* CS-318 Lab 14 — exact color spec from instructions */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@900&family=EB+Garamond:wght@400;800&display=swap');
+
+:root{
+  --bg:#330202;
+  --ink:#ffffff;
+  --gold:#d9ba6c;
+  --header:#161d2d;
+  --side:#374a76;
+  --chip:#fae2c0;
+  --chip-ink:#0f0f0f;
+  --title:#5f1818;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background-color:var(--bg);
+  color:var(--ink);
+  font-family:'EB Garamond', serif;
+}
+
+/* Headings per spec */
+h1,h2{
+  font-family:'Cinzel Decorative', cursive;
+  color:var(--gold);
+  margin:0 0 .5rem 0;
+}
+
+/* Header + nav (mobile first) */
+header{
+  background-color:var(--header);
+  padding:1rem;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+header .brand{font-family:'Cinzel Decorative', cursive; color:var(--gold); font-size:1.5rem; letter-spacing:.5px}
+nav{margin-top:.75rem}
+nav>a{
+  color:var(--gold);
+  border:1px solid var(--gold);
+  text-decoration:none;
+  padding:1rem;
+  font-weight:800;
+  display:inline-block;
+  margin:1rem 1rem 1rem 0;
+}
+nav>a:hover{
+  border-color:transparent;
+  background-color:var(--gold);
+  color:var(--header);
+}
+
+/* Sidenav (mobile first) */
+.sidenav{
+  background-color:var(--side);
+  padding:.5rem 1rem;
+}
+.sidenav>a{
+  background-color:var(--chip);
+  color:var(--chip-ink);
+  padding:.5rem 1rem;
+  display:inline-block;
+  margin:.5rem .5rem 0 0;
+  text-decoration:none;
+}
+.sidenav>a:hover{opacity:.8}
+
+/* Main + sections */
+main{padding:1rem}
+section{
+  padding:1rem;
+  margin:1rem 0;
+  border:1px solid var(--gold);
+}
+section.title{
+  margin:0;
+  padding:2rem 1rem;
+  background-color:var(--title);
+}
+/* Section grid: image + text columns */
+section{
+  display:grid;
+  grid-template-columns:12rem 1fr;
+  gap:1rem;
+}
+/* The instructions say to force the 2nd section to block layout */
+section:nth-child(2){
+  display:block;
+}
+section > img{
+  max-height:10rem;
+  width:auto;
+}
+
+/* Utility wrappers for layout areas; we will position with grid at 1100px */
+.wrapper{}
+/* Page-specific class to override at 800px */
+.ragnarok{}
+
+/* Desktop styles */
+@media (min-width:800px){
+  main{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1rem;
+  }
+  /* Title spans two cols */
+  .title{grid-column:1 / -1}
+  /* Second info section spans two cols */
+  main > section:nth-child(2){grid-column:1 / -1}
+  /* Ragnarok page becomes block (per spec) */
+  .ragnarok{display:block}
+}
+
+@media (min-width:1100px){
+  /* Body becomes grid with 20rem sidebar */
+  body{
+    display:grid;
+    grid-template-columns:20rem auto;
+    gap:1rem;
+  }
+  header, .sidenav, main{margin:0}
+  /* Place areas with grid rules (students are to practice grid-area; here we give a sensible default) */
+  header{grid-column:1 / -1}
+  .sidenav{grid-column:1 / 2}
+  main{grid-column:2 / 3}
+  /* Header uses flex for spacing choice */
+  header .bar{
+    display:flex;
+    justify-content:space-between; /* choose from spec list */
+    align-items:center;
+    gap:1rem;
+  }
+  /* Sidenav links stack and align right */
+  .sidenav>a{display:block}
+  .sidenav{ text-align:right }
+}
