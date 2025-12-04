@@ -1,0 +1,117 @@
+/* BODY */
+body {
+  font-family: "Times New Roman", Times, serif;
+  margin: 0;
+}
+
+/* HEADER */
+header {
+  background-color: #275218;
+  color: #fff;
+}
+
+/* Logo directly inside header */
+header > img {
+  max-width: 6rem;
+  margin: 1rem;
+}
+
+/* H1 in header */
+header > h1 {
+  display: inline-block;
+  margin: 1rem 0;
+  vertical-align: top;  /* align top of text with top of logo */
+}
+
+/* NAV in header */
+header > nav {
+  padding: 0 1rem 1rem 1rem; /* top | right | bottom | left */
+}
+
+/* NAV LINKS in header */
+header > nav > a {
+  background-color: #fff;
+  color: #275218;
+  text-decoration: none;
+  padding: 1rem;
+  border: 1px solid transparent;   /* fixes hover "jump" */
+  display: inline-block;            /* fix overlapping issue */
+}
+
+/* HOVER state for nav links */
+header > nav > a:hover {
+  background-color: #275218;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+/* MAIN */
+main {
+  background-color: #ebebeb;
+  padding: 1rem;
+  max-width: 60rem;
+  margin: 1rem auto;  /* centers the main block */
+}
+
+/* SECTION HEADINGS */
+h2 {
+  background-color: #275218;
+  color: #fff;
+  padding: 1rem;
+  margin: 0 0 1rem 0;
+}
+
+/* ARTICLES */
+article {
+  background-color: #fff;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+/* Clear floats inside articles so footers don't get weird */
+article::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* ARTICLE IMAGES */
+article > img {
+  max-width: 100%;
+  width: 30rem;
+  float: left;
+  margin: 0 1rem 1rem 0;
+}
+
+/* Special case for image-only images (baseball, Mahershala Ali) */
+article > .image-only {
+  float: none;
+  margin: 0;
+  width: 100%;
+}
+
+/* ARTICLE FOOTERS (inside article only) */
+article > footer {
+  font-style: italic;
+  font-weight: 900;
+}
+
+/* Span inside article footer */
+article > footer span {
+  color: #275218;
+  font-size: 1.25rem;
+}
+
+/* PAGE FOOTER at bottom of body */
+body > footer {
+  background-color: #275218;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Links inside bottom footer */
+body > footer > a {
+  color: #fff;
+  margin: 1rem;
+}
