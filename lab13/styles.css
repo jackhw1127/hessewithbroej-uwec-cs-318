@@ -18,7 +18,7 @@ tr:nth-child(odd) {
 }
 
 td, th {
-    padding: 5rem;/*Should be .5rem*/
+    padding: .5rem;/*Should be .5rem*/
     vertical-align: top;
 }
 
