@@ -1,138 +1,176 @@
 
-/* CS-318 Lab 14 — exact color spec from instructions */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@900&family=EB+Garamond:wght@400;800&display=swap');
-
-:root{
-  --bg:#330202;
-  --ink:#ffffff;
-  --gold:#d9ba6c;
-  --header:#161d2d;
-  --side:#374a76;
-  --chip:#fae2c0;
-  --chip-ink:#0f0f0f;
-  --title:#5f1818;
+body {
+  background-color: #330202;
+  color: #fff;
+  font-family: 'EB Garamond', serif;
+  margin: 0;
 }
 
-*{box-sizing:border-box}
-html,body{margin:0;padding:0}
-body{
-  background-color:var(--bg);
-  color:var(--ink);
-  font-family:'EB Garamond', serif;
+h1,
+h2 {
+  font-family: 'Cinzel Decorative', cursive;
+  color: #d9ba6c;
 }
 
-/* Headings per spec */
-h1,h2{
-  font-family:'Cinzel Decorative', cursive;
-  color:var(--gold);
-  margin:0 0 .5rem 0;
+
+header {
+  background-color: #161d2d;
+  padding: 1rem;
 }
 
-/* Header + nav (mobile first) */
-header{
-  background-color:var(--header);
-  padding:1rem;
-  border-bottom:1px solid rgba(255,255,255,.08);
-}
-header .brand{font-family:'Cinzel Decorative', cursive; color:var(--gold); font-size:1.5rem; letter-spacing:.5px}
-nav{margin-top:.75rem}
-nav>a{
-  color:var(--gold);
-  border:1px solid var(--gold);
-  text-decoration:none;
-  padding:1rem;
-  font-weight:800;
-  display:inline-block;
-  margin:1rem 1rem 1rem 0;
-}
-nav>a:hover{
-  border-color:transparent;
-  background-color:var(--gold);
-  color:var(--header);
+nav > a {
+  color: #d9ba6c;
+  border: 1px solid #d9ba6c;
+  text-decoration: none;
+  padding: 1rem;
+  font-weight: 800;
+  display: inline-block;
+  margin: 1rem 1rem 1rem 0;
 }
 
-/* Sidenav (mobile first) */
-.sidenav{
-  background-color:var(--side);
-  padding:.5rem 1rem;
-}
-.sidenav>a{
-  background-color:var(--chip);
-  color:var(--chip-ink);
-  padding:.5rem 1rem;
-  display:inline-block;
-  margin:.5rem .5rem 0 0;
-  text-decoration:none;
-}
-.sidenav>a:hover{opacity:.8}
-
-/* Main + sections */
-main{padding:1rem}
-section{
-  padding:1rem;
-  margin:1rem 0;
-  border:1px solid var(--gold);
-}
-section.title{
-  margin:0;
-  padding:2rem 1rem;
-  background-color:var(--title);
-}
-/* Section grid: image + text columns */
-section{
-  display:grid;
-  grid-template-columns:12rem 1fr;
-  gap:1rem;
-}
-/* The instructions say to force the 2nd section to block layout */
-section:nth-child(2){
-  display:block;
-}
-section > img{
-  max-height:10rem;
-  width:auto;
+nav > a:hover {
+  border-color: transparent;
+  background-color: #d9ba6c;
+  color: #161d2d;
 }
 
-/* Utility wrappers for layout areas; we will position with grid at 1100px */
-.wrapper{}
-/* Page-specific class to override at 800px */
-.ragnarok{}
 
-/* Desktop styles */
-@media (min-width:800px){
-  main{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:1rem;
+.sidenav {
+  background-color: #374a76;
+  padding: 0.5rem 1rem;
+}
+
+.sidenav > a {
+  background-color: #fae2c0;
+  color: #0f0f0f;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  margin: 0.5rem 0.5rem 0 0;
+  text-decoration: none;
+}
+
+.sidenav > a:hover {
+  opacity: 0.8;
+}
+
+
+main {
+  padding: 1rem;
+}
+
+section {
+  padding: 1rem;
+  margin: 1rem 0;
+  border: 1px solid #d9ba6c;
+}
+
+
+.title {
+  margin: 0;
+  padding: 2rem 1rem;
+  background-color: #5f1818;
+  border: none;
+  display: block;
+}
+
+h4 {
+  margin: 0;
+}
+
+
+section {
+  display: grid;
+  grid-template-columns: 12rem 1fr;
+  column-gap: 1rem;
+}
+
+section:nth-child(2) {
+  display: block;
+}
+
+section > img {
+  max-height: 10rem;
+}
+
+
+section > img {
+  grid-row: 1 / 4;
+  grid-column: 1 / 2;
+}
+
+section > h3 {
+  grid-row: 1;
+  grid-column: 2;
+}
+
+section > h4 {
+  grid-row: 2;
+  grid-column: 2;
+}
+
+section > p {
+  grid-row: 3;
+  grid-column: 2;
+}
+
+section.title {
+  display: block;
+}
+
+.ragnarok section:nth-child(5) {
+  display: block;
+}
+
+.ragnarok section {
+}
+
+
+@media (min-width: 800px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
   }
-  /* Title spans two cols */
-  .title{grid-column:1 / -1}
-  /* Second info section spans two cols */
-  main > section:nth-child(2){grid-column:1 / -1}
-  /* Ragnarok page becomes block (per spec) */
-  .ragnarok{display:block}
+
+  .title {
+    grid-column: 1 / -1;
+  }
+
+  main > section:nth-child(2) {
+    grid-column: 1 / -1;
+  }
+
+  .ragnarok {
+    display: block;
+  }
 }
 
-@media (min-width:1100px){
-  /* Body becomes grid with 20rem sidebar */
-  body{
-    display:grid;
-    grid-template-columns:20rem auto;
-    gap:1rem;
+@media (min-width: 1100px) {
+  body {
+    display: grid;
+    grid-template-columns: 20rem auto;
   }
-  header, .sidenav, main{margin:0}
-  /* Place areas with grid rules (students are to practice grid-area; here we give a sensible default) */
-  header{grid-column:1 / -1}
-  .sidenav{grid-column:1 / 2}
-  main{grid-column:2 / 3}
-  /* Header uses flex for spacing choice */
-  header .bar{
-    display:flex;
-    justify-content:space-between; /* choose from spec list */
-    align-items:center;
-    gap:1rem;
+
+  header {
+    grid-column: 1 / 3;
+    grid-row: 1;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
   }
-  /* Sidenav links stack and align right */
-  .sidenav>a{display:block}
-  .sidenav{ text-align:right }
+
+  .sidenav {
+    grid-column: 1 / 2;
+    grid-row: 2;
+  }
+
+  main {
+    grid-column: 2 / 3;
+    grid-row: 2;
+  }
+
+  .sidenav > a {
+    display: block;
+    text-align: right;
+  }
 }
