@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blue Ox Running | Home</title>
+  <meta name="description" content="Blue Ox Running is a specialty running store in downtown Eau Claire, WI. Shoes, apparel, gear, gait analysis, and community runs." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/blueoxe_logo.svg" alt="Blue Ox Running logo" class="logo"/>
+        <div class="brand-text">
+          <strong>Blue Ox Running</strong>
+          <span>Eau Claire, WI</span>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="events.html">Events</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container grid two">
+      <section class="hero">
+        <img src="images/53_13284_1716668226055.png" alt="Blue Ox Running hero image" class="hero-img">  
+        <p class="kicker">Specialty running store • Downtown Eau Claire</p>
+        <h1>Gear up, stay healthy, and run with your community.</h1>
+        <p>
+          Footwear, apparel, and accessories for road, trail, and winter running—plus free personalized gait analysis
+          and weekly group runs.
+        </p>
+        <div class="button-row">
+          <a class="btn" href="shop.html">Shop Categories</a>
+          <a class="btn secondary" href="events.html">See Weekly Runs</a>
+        </div>
+      </section>
+
+      <aside class="card" aria-label="Quick info">
+        <h2 class="section-title">Quick Info</h2>
+        <p class="small"><strong>Address:</strong> 417 S. Barstow Street, Eau Claire, WI</p>
+        <p class="small"><strong>Group Run:</strong> Thursdays at 6:00 PM</p>
+        <p class="small"><strong>Service:</strong> Free personalized gait analysis</p>
+        <a class="btn" href="contact.html">Get in Touch</a>
+      </aside>
+    </div>
+
+    <div class="container" style="margin-top: 1rem;">
+      <div class="grid three">
+        <section class="card">
+          <img src="images/2021_Who_we_are_35-3.png" alt="Footwear and fit help" class="card-img">
+          <h2 class="section-title">Footwear Fit Help</h2>
+          <p class="small">Not sure what you need? We’ll help match the right shoe to your running goals.</p>
+          <p class="small"><span class="badge">CTA</span> <a href="contact.html">Ask for a fitting</a></p>
+        </section>
+
+        <section class="card">
+          <img src="images/cq5dam.web.480.480@2x.png" alt="Gait analysis" class="card-img">
+          <h2 class="section-title">Gait Analysis</h2>
+          <p class="small">Personalized guidance to support comfort, performance, and injury prevention.</p>
+          <p class="small"><span class="badge">CTA</span> <a href="contact.html">Schedule a visit</a></p>
+        </section>
+
+        <section class="card">
+          <img src="images/running-club-inclusive-f.png" alt="Community runs" class="card-img">
+          <h2 class="section-title">Community Runs</h2>
+          <p class="small">Join the weekly Thursday run and connect with runners of all levels.</p>
+          <p class="small"><span class="badge">CTA</span> <a href="events.html">View run details</a></p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Blue Ox Running LLC</strong>
+        <div class="small">417 S. Barstow Street • Eau Claire, WI</div>
+      </div>
+      <div class="small">© <span id="year"></span> Blue Ox Running • Student project site</div>
+    </div>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+</html>

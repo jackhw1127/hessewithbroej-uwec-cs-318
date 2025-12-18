@@ -1,0 +1,296 @@
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  color: #0f172a;
+  background: #f0f4f8; 
+}
+
+.container {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: #ffffff;
+  color: #0f172a;
+  padding: .5rem .75rem;
+  border: 2px solid #1e3a8a;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  z-index: 9999;
+}
+
+.site-header {
+  background: #1e3a8a; 
+  color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  gap: 1rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.brand-mark {
+  width: 42px;
+  height: 42px;
+  background: #ffffff;
+  color: #1e3a8a;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+}
+
+.brand-text span {
+  font-size: .9rem;
+  color: #c7d2fe;
+}
+
+.nav {
+  display: flex;
+  gap: .75rem;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: .4rem .6rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+}
+
+.nav a:hover {
+  background: #1e40af;
+}
+
+.nav a[aria-current="page"] {
+  background: #ffffff;
+  color: #1e3a8a;
+  font-weight: 600;
+}
+
+main {
+  padding: 1.75rem 0 2.5rem;
+}
+
+.hero {
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 20px;
+}
+
+.hero h1 {
+  margin-top: 0;
+  font-size: clamp(1.8rem, 2.8vw, 2.5rem);
+}
+
+.hero p {
+  max-width: 70ch;
+  color: #e0e7ff;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 1.25rem;
+  box-shadow: 0 4px 14px rgba(30, 58, 138, 0.08);
+}
+
+.grid {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.grid.two { grid-template-columns: 1fr; }
+.grid.three { grid-template-columns: 1fr; }
+
+@media (min-width: 860px) {
+  .grid.two { grid-template-columns: 2fr 1fr; }
+  .grid.three { grid-template-columns: repeat(3, 1fr); }
+}
+
+.button-row {
+  display: flex;
+  gap: .75rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  text-decoration: none;
+  padding: .6rem 1rem;
+  border-radius: 12px;
+  font-weight: 600;
+  border: 2px solid #ffffff;
+  background: #ffffff;
+  color: #1e3a8a;
+}
+
+.btn:hover {
+  background: #e0e7ff;
+}
+
+.btn.secondary {
+  background: transparent;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.btn.secondary:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+.kicker {
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: .85rem;
+  color: #c7d2fe;
+}
+
+.section-title {
+  margin-top: 0;
+}
+
+.small {
+  font-size: .95rem;
+  color: #334155;
+}
+
+.badge {
+  background: #dbeafe;
+  color: #1e3a8a;
+  padding: .2rem .5rem;
+  border-radius: 999px;
+  font-size: .8rem;
+  font-weight: 600;
+}
+
+.list {
+  padding-left: 1.2rem;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  text-align: left;
+  color: #1e3a8a;
+  padding: .6rem .4rem;
+}
+
+.table td {
+  padding: .6rem .4rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.form {
+  display: grid;
+  gap: .9rem;
+}
+
+label {
+  font-weight: 600;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: .65rem .75rem;
+  border-radius: 12px;
+  border: 1px solid #c7d2fe;
+  font: inherit;
+}
+
+textarea {
+  min-height: 140px;
+}
+
+
+.site-footer {
+  background: #0f172a;
+  color: #c7d2fe;
+  padding: 1.25rem 0;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.site-footer strong {
+  color: #ffffff;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 18px;
+  margin-bottom: 1rem;
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 14px;
+  margin-bottom: .75rem;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.logo {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  display: block;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brand-text strong {
+  font-size: 1rem;
+}
+
+.brand-text span {
+  font-size: 0.85rem;
+  color: var(--muted);
+}

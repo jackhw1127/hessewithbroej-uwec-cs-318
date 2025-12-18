@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blue Ox Running | Contact</title>
+  <meta name="description" content="Contact Blue Ox Running in Eau Claire, WI. Ask about products, gait analysis, or group runs." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/blueoxe_logo.svg" alt="Blue Ox Running logo" class="logo"/>
+        <div class="brand-text"><strong>Blue Ox Running</strong><span>Eau Claire, WI</span></div>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="events.html">Events</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container grid two">
+      <section class="card">
+        <h1 class="section-title">Contact</h1>
+        <p class="small">Use this form to ask about products, gait analysis, or events.</p>
+
+        <form class="form" aria-label="Contact form">
+          <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
+          </div>
+
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </div>
+
+          <div>
+            <label for="topic">Topic</label>
+            <select id="topic" name="topic">
+              <option>Product question</option>
+              <option>Gait analysis</option>
+              <option>Group run / events</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+
+          <button class="btn" type="submit">Send Message</button>
+        </form>
+      </section>
+
+      <aside class="card" aria-label="Store info">
+        <h2 class="section-title">Store Info</h2>
+        <p class="small"><strong>Address:</strong><br>417 S. Barstow Street<br>Eau Claire, WI</p>
+        <p class="small"><strong>Group Run:</strong><br>Thursdays at 6:00 PM</p>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div><strong>Blue Ox Running LLC</strong><div class="small">Downtown Eau Claire, WI</div></div>
+      <div class="small">Student project site</div>
+    </div>
+  </footer>
+</body>
+</html>

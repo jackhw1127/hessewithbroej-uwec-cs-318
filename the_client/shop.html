@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blue Ox Running | Shop</title>
+  <meta name="description" content="Shop categories: footwear, apparel, accessories, and gear for road, trail, and winter running." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/blueoxe_logo.svg" alt="Blue Ox Running logo" class="logo"/>
+        <div class="brand-text"><strong>Blue Ox Running</strong><span>Eau Claire, WI</span></div>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="shop.html" aria-current="page">Shop</a>
+        <a href="about.html">About</a>
+        <a href="events.html">Events</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container">
+      <section class="hero">
+        <p class="kicker">Shop</p>
+        <h1>Find the right gear for your run.</h1>
+        <p>Browse categories and get help choosing products for road, trail, winter, and hydration needs.</p>
+      </section>
+
+      <div class="grid two" style="margin-top: 1rem;">
+        <aside class="card">
+          <h2 class="section-title">Filters</h2>
+          <form class="form" aria-label="Shop filters">
+            <div>
+              <label for="category">Category</label>
+              <select id="category" name="category">
+                <option>All</option>
+                <option>Footwear</option>
+                <option>Apparel</option>
+                <option>Accessories</option>
+                <option>Hydration</option>
+                <option>Winter Gear</option>
+              </select>
+            
+            </div>
+            <div>
+              <label for="use">Use</label>
+              <select id="use" name="use">
+                <option>Road Running</option>
+                <option>Trail Running</option>
+                <option>Winter Running</option>
+              </select>
+            </div>
+            <button class="btn" type="button">Apply Filters</button>
+          </form>
+        </aside>
+
+        <section class="card">
+          <h2 class="section-title">Categories</h2>
+          <div class="grid three">
+            <div class="card">
+              <h3>Footwear</h3>
+              <p class="small">Road • Trail • Stability • Cushioned</p>
+            
+            </div>
+            <div class="card">
+              <h3>Apparel</h3>
+              <p class="small">Tops • Shorts • Layers • Socks</p>
+              
+            </div>
+            <div class="card">
+              <h3>Accessories</h3>
+              <p class="small">Lights • Hats • Gloves • Tech</p>
+              
+            </div>
+          </div>
+
+          <div class="card" style="margin-top: 1rem;">
+            <h3>Need something specific?</h3>
+            <p class="small">Send us a message and we’ll point you in the right direction.</p>
+            <a class="btn" href="contact.html">Contact the Store</a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div><strong>Blue Ox Running LLC</strong><div class="small">Downtown Eau Claire, WI</div></div>
+      <div class="small">Student project site</div>
+    </div>
+  </footer>
+</body>
+</html>
